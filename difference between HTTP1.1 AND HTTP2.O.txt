@@ -1,0 +1,25 @@
+The difference between HTTP1.1 AND HTTP2
+
+HTTP introduced in year of 1991,
+
+HTTP is the foundation of data communication for world wide web.
+HTTP is based on client/server model. client (receiver of service) and server (provider of service). That are communication Via requests and responses.
+
+HTTP1.1 : 
+
+It introduced in a year of 1997,
+
+HTTP1.1 has three (3) TCP connections and It supports connection reuse. (example) for every TCP connection there could be multiple requests and responses, and pipelining where the client
+can request several resources from the server at once. However, pipelining was hard to implement due to issues such as head-of-line blocking and was not a feasible solution. It Introduces
+a warning header and error reporting is quicker and more efficient. The HTTP1.1's Authentication Mechanism is secure since it uses digest authentication, NTLM authentication.HTTP/1.1
+provides faster delivery of web pages and reduces web traffic as compared to HTTP/1.0.
+
+HTTP2.O : 
+
+It introduced in a year of 2015,
+
+Main goals of implementing HTTP2.O is for High level Compatibility, Page load speed improvements compression or request headers request Multiplexing over a single TCP connection etc.
+HTTP2.0 has single TCP connection and it compress a large amount of header frames. It uses a Hpack specification as a simple and secure Approach to header compression. Both client and
+server maintain a list of headers used in previous request.
+The improvements of HTTP2.0 is no more head of line blocking. Single TCP connection itself service multiple HTTP requests by Multiplexing.
+HTTP2 utilize multiplexing and server push to effectively reduce the page load time by a greater margin along with less sensitive to network delays.
