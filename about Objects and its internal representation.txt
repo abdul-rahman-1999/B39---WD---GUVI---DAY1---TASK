@@ -1,9 +1,7 @@
 Objects in Javascript
 
-There are 3 ways to create an Object in Javascript
 1.By Object literal.
 2.By creating instance of Object directly (using new keyword).
-3.By using an Object constructor. (using new keyword).
 
 Objects in Javascript is the most important data type. These Objects are quite different from Javascript's primitive data types (Number, String, Boolean, null, undefined and symbol) in the
 sense that while these primitive data-types all store a single value each.
@@ -13,6 +11,7 @@ objects in JavaScript may be defined as an unordered collection of related data,
 and are called properties and methods, respectively, in the context of an object.
 An object can be created with figure brackets {…} with an optional list of properties. A property is a “key: value” pair, where a key is a string (also called a “property name”), and value
 can be anything. 
+Object's output are automatically sorting in alphabetical order in javascript.
 
 
 Create JavaScript Object with Object Literal
@@ -36,6 +35,34 @@ let school = {
 In the above example “name”, “location”, “established” are all “keys” and “Vivekananda School”, “Delhi” and 1971 are values of these keys respectively. Each of these keys is referred to as
 properties of the object. 
 
+For Iterate Objects we must use (For in loop) concept.
+
+for(var i in  school){
+console.log(i, school[i]);
+}
+
+If we need to display particular key value, We can use Dot Syntax and Box Syntax,They are :
+
+console.log(school.location);      >=  Using Dot Syntax
+console.log(school["location"]);   >=  Using Box Syntax
+
+Another Method of Box Syntax : 
+
+var KeyName = "location";
+console.log(school[KeyName]);
+
+These are the ways to get particular keyvalue only in javascript.
+
+To change particular key value : 
+
+school.location = "Chennai";   >= To change particular key value
+console.log(school.location); 
+
+To add another new key value in the same Object :
+
+school.type = "Higher Secondary";
+console.log(school.type);
+
 Using the JavaScript Keyword new
 The following example also creates a new JavaScript object with four properties:
 
@@ -48,17 +75,7 @@ person.age = 50;
 person.eyeColor = “blue”;
 
 Create JavaScript Object with Constructor
-Constructor is nothing but a function and with help of new keyword, constructor function allows to create multiple objects of same flavor as shown below
+Constructor is nothing but a function and with help of new keyword, constructor function allows to create multiple objects of same flavor as shown below.
 
-Example of creating Object with constructor.
 
-function Vehicle(name, maker) {
-   this.name = name;
-   this.maker = maker;
-}
-
-let car1 = new Vehicle(’Fiesta’, 'Ford’);
-let car2 = new Vehicle(’Santa Fe’, 'Hyundai’)
-console.log(car1.name);    //Output: Fiesta
-console.log(car2.name);    //Output: Santa Fe
 
